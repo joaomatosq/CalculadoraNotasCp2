@@ -26,7 +26,7 @@ class Program
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("\n(Cadastrar aluno: ainda não implementado)");
+                    CadastrarAluno();
                     break;
                 case 2:
                     Console.WriteLine("\n(Lançar notas: ainda não implementado)");
@@ -35,7 +35,7 @@ class Program
                     Console.WriteLine("\n(Calcular média: ainda não implementado)");
                     break;
                 case 4:
-                    Console.WriteLine("\nEncerrando o programa. Até logo!");
+                    Console.WriteLine("\nEncerrando o programa!");
                     break;
                 default:
                     Console.WriteLine("\nOpção inválida! Digite um número de 1 a 4.");
@@ -65,4 +65,37 @@ class Program
 
         return 0; // 0 cai no "default" do switch (opção inválida)
     }
+
+    static void CadastrarAluno()
+    {
+        while (true)
+        {
+            Console.Write("\nDigite o nome do aluno: ");
+            string entrada = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(entrada))
+            {
+                Console.WriteLine("Nome inválido! O nome não pode ficar vazio.");
+                continue;
+            }
+
+            nomeAluno = entrada.Trim();
+            Console.WriteLine($"Aluno \"{nomeAluno}\" cadastrado com sucesso!");
+            break;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
